@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/eafcd51cfc.js" crossorigin="anonymous"></script>
+
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <title>To do list</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <img src="images/logo.avif" alt="logo to do" srcset="images/logo.svg">
+        </div>
+    </header>
+
+    <section class="todo">
+        <h1>À faire</h1>
+
+        <div class="add__bar bgc-transp">
+            <input type="text" id="task">
+            <div class="submit-btn">
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </div>
+
+        <div class="line">
+            <div class="container">
+                <div class="checkbox" id="premiermotetheure"></div>
+                <p class="label">libelle</p>
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+    </section>
+
+    <section class="done">
+        <h1>Fait</h1>
+        <div class="bgc-transp">
+            <p class="delete-all">Supprimer les tâches accomplies</p>
+        </div>
+        <div class="line">
+            <div class="container">
+                <div class="checkbox" id="premiermotetheure">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <p class="label">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
