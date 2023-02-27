@@ -37,6 +37,7 @@ h1 {
 .bgc-transp {
     background-color: rgba(255,77,0, 0.2);
     padding: 10px;
+    margin-bottom: 10px;
 }
 .add__bar {
     position: relative;
@@ -46,15 +47,17 @@ h1 {
     right: 5%;
     top: 50%;
     transform: translateY(-50%);
+    border: none;
+    background: none;
 }
-#task {
+#task-input {
     padding: 10px;
     padding-right: 20px;
     width: 100%;
     border-radius: 15px;
     border: solid 1px #d9d9d9;
 }
-#task:focus {
+#task-input:focus {
     outline: none;
     border-color: rgba(0,61,64, 0.8);
 }
