@@ -19,56 +19,31 @@
             </div>
         </header>
 
-        <section class="todo">
-            <h1>À faire</h1>
-
-            <form class="add__bar bgc-transp">
-                <input type="text" id="task-input" required>
-                <button type="submit" class="submit-btn">
-                    <i class="fa-solid fa-plus"></i>
-                </button>
-            </form>
-
-            <div class="line">
-                <div class="container">
-                    <div class="checkbox" id="premiermotetheure"></div>
-                    <p class="label">libelle</p>
-                    <i class="fa-solid fa-xmark"></i>
-                </div>
-            </div>
-            <div class="line">
-                <div class="container">
-                    <div class="checkbox" id="premiermotetheure"></div>
-                    <p class="label">libelle</p>
-                    <i class="fa-solid fa-xmark"></i>
-                </div>
-            </div>
-        </section>
-
-        <section class="done">
-            <h1>Fait</h1>
-            <div class="bgc-transp">
-                <p class="delete-all">Supprimer les tâches accomplies</p>
-            </div>
-            <div class="line">
-                <div class="container">
-                    <div class="checkbox" id="premiermotetheure">
-                        <i class="fa-solid fa-check"></i>
+        <main>
+            <section class="todo">
+                <h1>To do</h1>
+    
+                <form class="add__bar bgc-transp">
+                    <div class="container">
+                        <input type="text" id="task-input" required>
+                        <button type="submit" class="submit-btn">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
                     </div>
-                    <p class="label">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <i class="fa-solid fa-xmark"></i>
+                </form>
+    
+                <div class="todo__list"></div>
+            </section>
+    
+            <section class="done">
+                <h1>Done</h1>
+                <div class="bgc-transp">
+                    <p class="delete-all">Supprimer les tâches terminées</p>
                 </div>
-            </div>
-            <div class="line">
-                <div class="container">
-                    <div class="checkbox" id="premiermotetheure">
-                        <i class="fa-solid fa-check"></i>
-                    </div>
-                    <p class="label">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <i class="fa-solid fa-xmark"></i>
-                </div>
-            </div>
-        </section>
+    
+                <div class="done__list"></div>
+            </section>
+        </main>
 
         <script src="js/script.js"></script>
     </body>

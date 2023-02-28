@@ -24,19 +24,19 @@ h1 {
     padding: 10px 0;
     margin: 0;
     font-size: 1rem;
+    border: solid 2px #FF4D00;
 }
 .todo h1 {
     background-color: #FF4D00;
     color: white;
 }
 .done h1 {
-    border: solid 2px #FF4D00;
     color: #FF4D00;
 }
 
 .bgc-transp {
     background-color: rgba(255,77,0, 0.2);
-    padding: 10px;
+    padding: 10px 0;
     margin-bottom: 10px;
 }
 .add__bar {
@@ -44,7 +44,7 @@ h1 {
 }
 .submit-btn {
     position: absolute;
-    right: 5%;
+    right: 3.5%;
     top: 50%;
     transform: translateY(-50%);
     border: none;
@@ -52,7 +52,7 @@ h1 {
 }
 #task-input {
     padding: 10px;
-    padding-right: 20px;
+    padding-right: 35px;
     width: 100%;
     border-radius: 15px;
     border: solid 1px #d9d9d9;
@@ -93,6 +93,10 @@ h1 {
     color: rgba(227,68,0, 0.85);
 }
 
+.todo .fa-check {
+    display: none;
+}
+
 .done {
     margin-top: 40px;
 }
@@ -103,6 +107,9 @@ h1 {
     text-decoration: underline;
     text-transform: lowercase;
 }
+.delete-all:hover {
+    cursor: pointer;
+}
 .done .label, .done .checkbox, .done .fa-check {
     opacity: 0.5;
 }
@@ -111,7 +118,58 @@ h1 {
 }
 .done .checkbox {
     background-color:rgba(0,61,64, 0.8);
+    border: none;
 }
 .done .fa-check {
     color: white;
+}
+
+@media (min-width: 600px) {
+    .container {
+        width: 90%;
+    }
+    .submit-btn {
+        right: 5.5%;
+    }
+}
+
+@media (min-width: 800px) {
+    header {
+        margin-bottom: 40px;
+    }
+    main {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin: auto;
+    }
+    main, .checkbox {
+        max-width: 1200px;
+    }
+    section {
+        box-shadow: 0px 1px 7px 3px rgb(0 0 0 / 10%);
+        min-height: 150px;
+        padding-bottom: 20px;
+    }
+    #task-input {
+        border-radius: 10px;
+    }
+    .todo {
+        width: 59%;
+    }
+    .done {
+        margin-top: 0;
+        width: 39%;
+    }
+    .done .bgc-transp {
+        height: 57.05px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media (min-width: 1100px) {
+    .delete-all {
+        font-size: 0.9rem;
+    }
 }
