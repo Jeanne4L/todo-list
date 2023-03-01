@@ -37,7 +37,7 @@ taskForm.addEventListener('submit', (e) => {
 function displayList(list, listPlace) {
     for (let i=0; i<list.length; i++) {
         document.querySelector('.'+listPlace+'').innerHTML += `
-        <div class="line" data-id="${list[i].id}">
+        <div class="line" data-id="${list[i].id}" data-part="todo">
             <div class="container">
                 <div class="checkbox">
                     <i class="fa-solid fa-check"></i>
@@ -83,7 +83,7 @@ function saveListLocalStorage(list, id, task, listName) {
         id: id,
         task: task
     })
-    localStorage.setItem(''+listName+'', JSON.stringify(list));
+    localStorage.setItem(`${listName}`, JSON.stringify(list));
 }
 
 function deleteTask() {
@@ -130,62 +130,54 @@ function changeTaskStatus() {
     let checkbox = document.querySelectorAll('.checkbox');
 
     for( let i=0; i<checkbox.length; i++) {
-        checkbox[i].addEventListener('click', () => {
+        checkbox[i].onclick = function() {
             let datasetId = checkbox[i].closest('[data-id]').dataset.id;
+            let index = todoList.findIndex((task) => task.id === datasetId)
 
-            moveTaskFromTodo(datasetId);
-            moveTaskFromDone(datasetId);
-        })
-    }
-}
-changeTaskStatus();
-
-function moveTaskFromTodo(datasetId) {
-    for (let i=0; i< todoList.length; i++) {
-        if(todoList[i].id === datasetId) {
-            // add to done list
-            let id = todoList[i].id;
-            let task = todoList[i].task;
-            let listName = 'doneList';
-
-            checkListLocalStorage(doneList, id, task, listName);
-            if(doneList !== null) {
-                document.querySelector('.done__list').innerHTML = '';
-            } 
-            doneList = JSON.parse(localStorage.getItem('doneList'));
-            displayDoneList();
-            
-            // delete from to do list
-            listName = 'todoList';
-            let listPlace = 'todo__list';
-            removeItemLocalStorage(datasetId, todoList, listName, listPlace, displayTodoList);
+            if(index !== -1) {
+                moveTaskFromTodo(datasetId, index)
+            } else {
+                index = doneList.findIndex((task) => task.id === datasetId)
+                moveTaskFromDone(datasetId, index)
+            }
+            changeTaskStatus()
         }
     }
-    moveTaskFromDone(datasetId);
-}
-function moveTaskFromDone(datasetId) {
-    for (let i=0; i< doneList.length; i++) {
-        if(doneList[i].id === datasetId) {
-            // add to done list
-            let id = doneList[i].id;
-            let task = doneList[i].task;
-            let listName = 'todoList';
+};
+changeTaskStatus()
+function moveTaskFromTodo(datasetId, index) {
+    // add to done list
+    let id = todoList[index].id;
+    let task = todoList[index].task;
+    let listName = 'doneList';
 
-            checkListLocalStorage(todoList, id, task, listName);
-            if(todoList !== null) {
-                document.querySelector('.todo__list').innerHTML = '';
-            } 
-            todoList = JSON.parse(localStorage.getItem('todoList'));
-            displayTodoList();
-            
-            // delete from to do list
-            listName = 'doneList';
-            let listPlace = 'done__list';
-            removeItemLocalStorage(datasetId, doneList, listName, listPlace, displayDoneList);
-        }
-        else {
-            moveTaskFromTodo(datasetId);
-        }
-    }
+    checkListLocalStorage(doneList, id, task, listName);
+    if(doneList !== null) {
+        document.querySelector('.done__list').innerHTML = '';
+    } 
+    doneList = JSON.parse(localStorage.getItem('doneList'));
+    displayDoneList();
+    
+    // delete from to do list
+    listName = 'todoList';
+    let listPlace = 'todo__list';
+    removeItemLocalStorage(datasetId, todoList, listName, listPlace, displayTodoList);
 }
-// localStorage.clear()
+function moveTaskFromDone(datasetId, index) {
+    // add to todo list
+    let id = doneList[index].id;
+    let task = doneList[index].task;
+    let listName = 'todoList';
+
+    checkListLocalStorage(todoList, id, task, listName);
+    if(todoList !== null) {
+        document.querySelector('.todo__list').innerHTML = '';
+    } 
+    todoList = JSON.parse(localStorage.getItem('todoList'));
+    displayTodoList();
+    
+    // delete from done list
+    listName = 'doneList';
+    let listPlace = 'done__list';
+    removeItemLocalStorage(datasetId, doneList, listName, listPlace, displayDoneList);
+}
