@@ -36,8 +36,8 @@ taskForm.addEventListener('submit', (e) => {
 
 function displayList(list, listPlace) {
     for (let i=0; i<list.length; i++) {
-        document.querySelector('.'+listPlace+'').innerHTML += `
-        <div class="line" data-id="${list[i].id}" data-part="todo">
+        document.querySelector(`.${listPlace}`).innerHTML += `
+        <div class="line" data-id="${list[i].id}">
             <div class="container">
                 <div class="checkbox">
                     <i class="fa-solid fa-check"></i>
@@ -47,8 +47,8 @@ function displayList(list, listPlace) {
             </div>
         </div>`
     }
-    deleteTask();
     changeTaskStatus();
+    deleteTask();
     deleteAllDoneTasks();
 }
 
@@ -77,53 +77,12 @@ function checkListLocalStorage(list, id, task, listName) {
         saveListLocalStorage(list, id, task, listName);
     }
 }
-
 function saveListLocalStorage(list, id, task, listName) {
     list.push({
         id: id,
         task: task
     })
     localStorage.setItem(`${listName}`, JSON.stringify(list));
-}
-
-function deleteTask() {
-    let deleteBtns = document.querySelectorAll('.delete');
-
-    for( let i=0; i<deleteBtns.length; i++) {
-        deleteBtns[i].addEventListener('click', () => {
-            let datasetId = deleteBtns[i].closest('[data-id]').dataset.id;
-    
-            let listName = 'todoList';
-            let listPlace = 'todo__list';
-            removeItemLocalStorage(datasetId, todoList, listName, listPlace, displayTodoList);
-
-            listName = 'doneList';
-            listPlace = 'done__list';
-            removeItemLocalStorage(datasetId, doneList, listName, listPlace, displayDoneList);
-        })
-    }
-}
-
-function deleteAllDoneTasks() {
-    deleteAllBtn.addEventListener('click', () => {
-        document.querySelector('.done__list').innerHTML = '';
-
-        doneList.splice(0, doneList.length);
-        localStorage.setItem('doneList', JSON.stringify(doneList));
-    })
-}
-
-function removeItemLocalStorage(datasetId, list, listName, listPlace, displayFunction) {
-    for (let i=0; i< list.length; i++) {
-        if(list[i].id === datasetId) {
-            let index = list.indexOf(list[i]);
-            list.splice(index, 1);
-            localStorage.setItem(`${listName}`, JSON.stringify(list));
-        
-            document.querySelector(`.${listPlace}`).innerHTML = '';
-            displayFunction();
-        }
-    }
 }
 
 function changeTaskStatus() {
@@ -144,7 +103,9 @@ function changeTaskStatus() {
         }
     }
 };
-changeTaskStatus()
+
+changeTaskStatus();
+
 function moveTaskFromTodo(datasetId, index) {
     // add to done list
     let id = todoList[index].id;
@@ -180,4 +141,43 @@ function moveTaskFromDone(datasetId, index) {
     listName = 'doneList';
     let listPlace = 'done__list';
     removeItemLocalStorage(datasetId, doneList, listName, listPlace, displayDoneList);
+}
+
+function deleteTask() {
+    let deleteBtns = document.querySelectorAll('.delete');
+
+    for( let i=0; i<deleteBtns.length; i++) {
+        deleteBtns[i].addEventListener('click', () => {
+            let datasetId = deleteBtns[i].closest('[data-id]').dataset.id;
+    
+            let listName = 'todoList';
+            let listPlace = 'todo__list';
+            removeItemLocalStorage(datasetId, todoList, listName, listPlace, displayTodoList);
+
+            listName = 'doneList';
+            listPlace = 'done__list';
+            removeItemLocalStorage(datasetId, doneList, listName, listPlace, displayDoneList);
+        })
+    }
+}
+function removeItemLocalStorage(datasetId, list, listName, listPlace, displayFunction) {
+    for (let i=0; i< list.length; i++) {
+        if(list[i].id === datasetId) {
+            let index = list.indexOf(list[i]);
+            list.splice(index, 1);
+            localStorage.setItem(`${listName}`, JSON.stringify(list));
+        
+            document.querySelector(`.${listPlace}`).innerHTML = '';
+            displayFunction();
+        }
+    }
+}
+
+function deleteAllDoneTasks() {
+    deleteAllBtn.addEventListener('click', () => {
+        document.querySelector('.done__list').innerHTML = '';
+
+        doneList.splice(0, doneList.length);
+        localStorage.setItem('doneList', JSON.stringify(doneList));
+    })
 }

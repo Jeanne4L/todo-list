@@ -2,13 +2,13 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="16.184683mm"
-   height="16.326674mm"
-   viewBox="0 0 16.184683 16.326674"
+   width="14.672765mm"
+   height="11.330359mm"
+   viewBox="0 0 14.672765 11.330359"
    version="1.1"
    id="svg5"
    inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
-   sodipodi:docname="todolist__logo.svg"
+   sodipodi:docname="logo.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -25,53 +25,78 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="4.4850886"
-     inkscape:cx="48.716986"
-     inkscape:cy="72.350856"
+     inkscape:cx="-20.846857"
+     inkscape:cy="60.31096"
      inkscape:window-width="1920"
      inkscape:window-height="1051"
      inkscape:window-x="-9"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="g414" />
   <defs
      id="defs2" />
   <g
      inkscape:label="logo"
      inkscape:groupmode="layer"
-     id="layer1"
-     transform="matrix(0.96719577,0,0,0.97109429,-58.546995,-77.899325)"
-     style="stroke-width:1.03184">
+     id="g414"
+     transform="matrix(0.89493635,0,0,0.89854362,-54.526058,-74.543362)"
+     style="display:inline;stroke-width:1.11516">
     <text
        xml:space="preserve"
-       style="font-size:10.5833px;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic';fill:#003d40;fill-rule:evenodd;stroke-width:0.103184;stroke-linecap:round;stroke-miterlimit:0;paint-order:fill markers stroke"
-       x="60.734829"
-       y="88.314606"
-       id="text236"><tspan
+       style="font-size:5.91578px;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic';display:inline;fill:#0d0d0d;fill-opacity:1;fill-rule:evenodd;stroke-width:0.111516;stroke-linecap:round;stroke-miterlimit:0;paint-order:fill markers stroke"
+       x="58.54422"
+       y="91.466431"
+       id="text406-6"
+       transform="scale(1.047172,0.95495296)"><tspan
          sodipodi:role="line"
-         id="tspan234"
-         style="stroke-width:0.103184"
-         x="60.734829"
-         y="88.314606">TO</tspan><tspan
+         id="tspan402-8"
+         style="fill:#0d0d0d;fill-opacity:1;stroke-width:0.111516"
+         x="58.54422"
+         y="91.466431">T</tspan><tspan
          sodipodi:role="line"
-         style="stroke-width:0.103184"
-         x="60.734829"
-         y="101.54373"
-         id="tspan238" /></text>
+         style="fill:#0d0d0d;fill-opacity:1;stroke-width:0.111516"
+         x="58.54422"
+         y="98.861153"
+         id="tspan404-8" /></text>
     <text
        xml:space="preserve"
-       style="font-size:10.5833px;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic';fill:#003d40;fill-rule:evenodd;stroke-width:0.103184;stroke-linecap:round;stroke-miterlimit:0;paint-order:fill markers stroke"
-       x="59.851688"
-       y="96.657295"
-       id="text242"><tspan
+       style="font-size:5.08394px;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic';display:inline;fill:#0d0d0d;fill-opacity:1;fill-rule:evenodd;stroke-width:0.111516;stroke-linecap:round;stroke-miterlimit:0;paint-order:fill markers stroke"
+       x="67.42984"
+       y="82.435555"
+       id="text410-1"
+       transform="scale(0.94440523,1.0588675)"><tspan
          sodipodi:role="line"
-         id="tspan240"
-         style="stroke-width:0.103184"
-         x="59.851688"
-         y="96.657295">DO</tspan></text>
+         id="tspan408-6"
+         style="fill:#0d0d0d;fill-opacity:1;stroke-width:0.111516"
+         x="67.42984"
+         y="82.435555">O</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10.8752px;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic';display:inline;fill:#0d0d0d;fill-opacity:1;fill-rule:evenodd;stroke-width:0.892121;stroke-linecap:round;stroke-miterlimit:0;paint-order:fill markers stroke"
+       x="60.367481"
+       y="95.176979"
+       id="text1702-0"
+       transform="scale(0.9990034,1.0009976)"><tspan
+         sodipodi:role="line"
+         id="tspan1700-0"
+         style="stroke-width:0.892122"
+         x="60.367481"
+         y="95.176979">D</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10.5003px;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic';display:inline;fill:#0d0d0d;fill-opacity:1;fill-rule:evenodd;stroke-width:0.111516;stroke-linecap:round;stroke-miterlimit:0;paint-order:fill markers stroke"
+       x="67.461578"
+       y="95.126709"
+       id="text1710-0"><tspan
+         sodipodi:role="line"
+         id="tspan1708-8"
+         style="fill:#0d0d0d;fill-opacity:1;stroke-width:0.111516"
+         x="67.461578"
+         y="95.126709">O</tspan></text>
     <path
-       style="fill:#f05024;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.82547;stroke-linecap:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
-       d="m 68.493537,90.434829 3.503933,5.673035 4.963906,-8.838556 -0.959411,-7e-6 -4.129634,7.295159 -2.335955,-4.087921 z"
-       id="path1944"
+       style="display:inline;fill:#d93425;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.89212;stroke-linecap:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       d="m 68.427968,89.466369 3.503933,5.67304 4.963906,-8.83856 -0.959411,-1e-5 -4.129634,7.29516 -2.335955,-4.08792 z"
+       id="path412-8"
        sodipodi:nodetypes="ccccccc" />
   </g>
 </svg>

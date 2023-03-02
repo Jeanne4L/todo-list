@@ -1,5 +1,5 @@
 * {
-    color: rgba(0,61,64, 0.8);
+    color: #0D0D0D;
     font-family:'Lucida Sans', Verdana, sans-serif;
     box-sizing: border-box;
 }
@@ -13,7 +13,6 @@ body {
     margin: auto;
 }
 header img {
-    width: 40px;
     margin: 10px 0;
 }
 
@@ -24,23 +23,26 @@ h1 {
     padding: 10px 0;
     margin: 0;
     font-size: 1rem;
-    border: solid 2px #FF4D00;
+    border: solid 2px #D93425;
 }
 .todo h1 {
-    background-color: #FF4D00;
+    background-color: #D93425;
     color: white;
 }
 .done h1 {
-    color: #FF4D00;
+    color: #D93425;
 }
 
 .bgc-transp {
-    background-color: rgba(255,77,0, 0.2);
+    background-color: rgba(217,52,37, 0.1);
     padding: 10px 0;
     margin-bottom: 10px;
 }
 .add__bar {
     position: relative;
+}
+.hidden {
+    visibility: hidden;
 }
 .submit-btn {
     position: absolute;
@@ -82,7 +84,7 @@ h1 {
     height: 15px;
     margin-top: 2px;
     border-radius: 20px;
-    border: solid 1px rgba(0,61,64, 0.8);
+    border: solid 1px rgba(13,13,13, 0.8);
     display: flex;
     align-items: center;
 }
@@ -90,7 +92,7 @@ h1 {
     font-size: 0.8rem;
 }
 .fa-xmark, .delete-all {
-    color: rgba(227,68,0, 0.85);
+    color: #d10101;
 }
 
 .todo .fa-check {
@@ -117,7 +119,7 @@ h1 {
     text-decoration: line-through;
 }
 .done .checkbox {
-    background-color:rgba(0,61,64, 0.8);
+    background-color:rgba(13,13,13, 0.8);
     border: none;
 }
 .done .fa-check {
