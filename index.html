@@ -1,50 +1,54 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            
-        <link rel="stylesheet" href="style.min.css">
-            <script src="https://kit.fontawesome.com/eafcd51cfc.js" crossorigin="anonymous"></script>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-        <title>To do list</title>
-    </head>
+		<link rel="stylesheet" href="style.min.css" />
+		<script
+			src="https://kit.fontawesome.com/eafcd51cfc.js"
+			crossorigin="anonymous"
+		></script>
 
-    <body>
-        <header>
-            <div class="container">
-                <img src="images/logo.avif" alt="logo to do" srcset="images/logo.svg">
-            </div>
-        </header>
+		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+		<title>To do list</title>
+	</head>
 
-        <main>
-            <section class="todo">
-                <h1>To do</h1>
-    
-                <form class="add__bar bgc-transp">
-                    <div class="container">
-                        <input type="text" id="task-input" required>
-                        <button type="submit" class="submit-btn">
-                            <span class="hidden">ajouter</span><i class="fa-solid fa-plus"></i>
-                        </button>
-                    </div>
-                </form>
-    
-                <div class="todo__list"></div>
-            </section>
-    
-            <section class="done">
-                <h1>Done</h1>
-                <div class="bgc-transp">
-                    <p class="delete-all">Supprimer les tâches terminées</p>
-                </div>
-    
-                <div class="done__list"></div>
-            </section>
-        </main>
+	<body>
+		<header>
+			<div class="container">
+				<img src="images/logo.avif" alt="logo to do" srcset="images/logo.svg" />
+			</div>
+		</header>
 
-        <script src="script.min.js"></script>
-    </body>
+		<main>
+			<section class="todo">
+				<h1>To do</h1>
+
+				<form class="add__bar bgc-transp">
+					<div class="container">
+						<input type="text" id="task-input" required />
+						<button type="submit" class="submit-btn">
+							<span class="hidden">ajouter</span
+							><i class="fa-solid fa-plus"></i>
+						</button>
+					</div>
+				</form>
+
+				<div class="todo__list"></div>
+			</section>
+
+			<section class="done">
+				<h1>Done</h1>
+				<div class="bgc-transp">
+					<p class="delete-all">Supprimer les tâches terminées</p>
+				</div>
+
+				<div class="done__list"></div>
+			</section>
+		</main>
+
+		<script src="script.min.js"></script>
+	</body>
 </html>
